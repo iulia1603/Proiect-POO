@@ -1,10 +1,14 @@
+// Media.cpp
 #include "Media.h"
 #include <iostream>
-#include<cmath>
+
+std::ostream& operator<<(std::ostream& os, const Media& media) {
+    media.print(os);
+    return os;
+}
 
 void Song::display() const {
-    std::cout << type << ": " << title << " | Duration: " << duration
-              << " min | Artist: " << artist << "\n";
+    print(std::cout);
 }
 
 std::unique_ptr<Media> Song::clone() const {
@@ -12,8 +16,7 @@ std::unique_ptr<Media> Song::clone() const {
 }
 
 void Audiobook::display() const {
-    std::cout << type << ": " << title << " | Duration: " << duration
-              << " min | Author: " << author << "\n";
+    print(std::cout);
 }
 
 std::unique_ptr<Media> Audiobook::clone() const {
@@ -21,8 +24,7 @@ std::unique_ptr<Media> Audiobook::clone() const {
 }
 
 void Podcast::display() const {
-    std::cout << type << ": " << title << " | Duration: " << duration
-              << " min | Host: " << host << "\n";
+    print(std::cout);
 }
 
 std::unique_ptr<Media> Podcast::clone() const {

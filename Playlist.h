@@ -17,6 +17,8 @@ public:
     void addMedia(const Media& media);
     double calculateTotalDuration() const;
     void display() const;
+
+    friend std::ostream& operator<<(std::ostream& os, const Playlist& playlist);
 };
 
-#endif // PLAYLIST
+#endif // PLAYLIST_H

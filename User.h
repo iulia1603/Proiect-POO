@@ -1,9 +1,9 @@
+// User.h
 #ifndef USER_H
 #define USER_H
 
 #include <iostream>
 #include <string>
-#include <vector>
 
 class User {
 private:
@@ -14,9 +14,8 @@ public:
     User(const std::string& username, const std::string& email) : username(username), email(email) {}
 
     const std::string& getUsername() const { return username; }
-    const std::string& getEmail() const { return email; }
 
-    void display() const; // Afișează detalii despre utilizator
+    void display() const;
 };
 
 #endif // USER_H

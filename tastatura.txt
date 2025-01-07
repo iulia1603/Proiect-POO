@@ -1,29 +1,28 @@
 Media:
-Song
-Shape of You
+Thunder
 3.5
-Ed Sheeran
-Audiobook
-The Hobbit
+Song
+Imagine Dragons
+Sapiens
 720
-J.R.R. Tolkien
-Podcast
-Joe Rogan Experience
+Audiobook
+Yuval Noah Harari
+JRE #1234
 180
+Podcast
 Joe Rogan
-Utilizatori:
-john_doe
-john@example.com
-filip_haha
-filip@example.com
-jane_smith
-jane@example.com
-Playlist:
-user:john_doe
-Shape of You
-user:jane_smith
-The Hobbit
-user:filip_haha
-Shape of You
-Joe Rogan Experience
-The Hobbit
+
+Users:
+alice_smith
+alice@email.com
+bob_jones
+bob@email.com
+
+Playlists:
+user:alice_smith
+Workout Mix
+Thunder
+JRE #1234
+user:bob_jones
+Study Time
+Sapiens
