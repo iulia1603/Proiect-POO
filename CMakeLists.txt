@@ -49,6 +49,14 @@ include(cmake/Options.cmake)
 add_executable(${MAIN_EXECUTABLE_NAME}
     main.cpp
     generated/src/Helper.cpp
+        Media.cpp
+        Media.h
+        User.h
+        User.cpp
+        Playlist.h
+        Playlist.cpp
+        MusicLibrary.h
+        MusicLibrary.cpp
 )
 
 include(cmake/CompilerFlags.cmake)
