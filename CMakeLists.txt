@@ -57,6 +57,8 @@ add_executable(${MAIN_EXECUTABLE_NAME}
         Playlist.cpp
         MusicLibrary.h
         MusicLibrary.cpp
+        Exceptions.h
+        MediaFactory.h
 )
 
 include(cmake/CompilerFlags.cmake)

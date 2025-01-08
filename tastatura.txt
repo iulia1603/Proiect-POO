@@ -11,18 +11,21 @@ JRE #1234
 180
 Podcast
 Joe Rogan
+Avengers
+121.6
+Video
+Marvel Movie
+Quality
+Full HD
+MonaLisa
+0
+Image
+Picaso
+Price
+400000000
 
 Users:
 alice_smith
 alice@email.com
 bob_jones
 bob@email.com
-
-Playlists:
-user:alice_smith
-Workout Mix
-Thunder
-JRE #1234
-user:bob_jones
-Study Time
-Sapiens

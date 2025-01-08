@@ -4,40 +4,39 @@
 #include <cstring>
 
 
-int main(int argc, char* argv[]) {
+int main() {
     try {
         MusicLibrary library;
-        std::string loadFromFile = "tastatura.txt";
 
-        if (argc > 1) {
-            if (strcmp(argv[1], "hibrid") == 0) {
-                library.SetHibridLoading();
-                if (argc > 2) {
-                    loadFromFile = argv[2];
-                }
-            } else {
-                loadFromFile = argv[1];
-            }
-
-            library.loadFromFile(loadFromFile);
-
-            if (library.IsHibridLoading()) {
-                library.displayMedia();
-                library.displayUsers();
-                std::cin >> library;
-            }
-        } else {
-            std::cin >> library;
+        try {
+            library.loadFromFile("tastatura.txt");
+        } catch (const FileOperationException& e) {
+            std::cerr << "File error: " << e.what() << std::endl;
+            return 1;
         }
 
-        if (!library.IsHibridLoading()) {
-            library.displayMedia();
-            library.displayUsers();
+        library.displayMedia();
+        library.displayUsers();
+
+        std::cout << std::endl;
+
+        try {
+            std::cin >> library;
+        } catch (const UserNotFoundException& e) {
+            std::cerr << "User error: " << e.what() << std::endl;
+        } catch (const MediaNotFoundException& e) {
+            std::cerr << "Media error: " << e.what() << std::endl;
+        } catch (const InvalidDurationException& e) {
+            std::cerr << "Duration error: " << e.what() << std::endl;
         }
 
         std::cout << library << std::endl;
-    } catch (const std::exception& ex) {
-        std::cerr << "Exception: " << ex.what() << "\n";
+    } catch (const MediaLibraryException& e) {
+        std::cerr << "Library error: " << e.what() << std::endl;
+        return 1;
+    } catch (const std::exception& e) {
+        std::cerr << "Unexpected error: " << e.what() << std::endl;
+        return 1;
     }
     return 0;
 }
