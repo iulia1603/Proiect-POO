@@ -1,5 +1,7 @@
-Biblioteca Muzicala
+# Bibliotecă Audio
 
+
+Această aplicație implementează o Bibliotecă Audio care permite gestionarea și afișarea unui catalog de fișiere audio, incluzând melodii, audiobook-uri și podcast-uri, precum și organizarea acestora în playlist-uri.
 
 
 
